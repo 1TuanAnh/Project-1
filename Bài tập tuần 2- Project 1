@@ -1,0 +1,10 @@
+string = 'I love watching Vietnamese movies. One of the most impressive Vietnamese films is The Age of Youth. This film has two parts. The film tells the story of Linh – the daughter of a well-off family. She loves Korean culture, so she went to Korea to live and study. Here, Linh accidentally lives with Khanh, Mai and Junsu – the son of the innkeeper.'
+count={}
+for i in string:
+    if i in count:
+        count[i] +=1
+    else:
+        count[i] = 1
+ 
+for i in sorted(count, key=count.get, reverse=False):
+    print(i, count[i])
