@@ -1,7 +1,7 @@
 import sys
 
-dict_file = open(sys.argv[1], 'r')
-misspellings_file = open(sys.argv[2], 'r')
+dict_file = open(sys.argv[0], 'r')
+misspellings_file = open(sys.argv[0], 'r')
 corrections_file = open('sua_loi_chinh_ta.txt', 'w')
 
 dictionary = dict_file.read().split('\n')
@@ -58,7 +58,7 @@ def min_distance(target, source):
     return distance[n][m]
 
 
-print 'Dang xu ly...'
+print ('Dang xu ly...')
 for word in misspellings:
     abs_min = min_distance(dictionary[0], word)
     correction = dictionary[0]
@@ -72,4 +72,4 @@ for word in misspellings:
 
 corrections_file.close()
 
-print 'Xong.'
+print ('Xong.')
